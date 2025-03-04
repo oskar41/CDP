@@ -1,25 +1,24 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { increment, decrement } from "../features/counter/counterSlice";
-import { fetchCounterValue } from "../features/counter/counterActions";
+import { useGetCounterValueQuery } from "../features/counter/counterApi";
 
 const Counter = () => {
-  const count = useSelector((state) => state.counter.value);
-  const status = useSelector((state) => state.counter.status);
-  const dispatch = useDispatch();
+  const { data: counterValue, isLoading, isFetching, isError, refetch } =
+    useGetCounterValueQuery();
+  
+    useEffect(() => {
+      console.log('isLoading', isLoading)
+    }, [isLoading])
 
-  useEffect(() => {
-    dispatch(fetchCounterValue()); // Отримуємо значення при завантаженні компонента
-  }, [dispatch]);
+  if (isFetching) return <p>Loading...</p>;
+  if (isError) return <p>Error loading counter</p>;
 
   return (
     <div>
-      <h1>Counter: {status === "loading" ? "Loading..." : count}</h1>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
-      <button onClick={() => dispatch(fetchCounterValue())}>Fetch Random</button>
+      <h1>Counter: {counterValue .length}</h1>
+      <button onClick={() => refetch()}>Reload</button>
     </div>
   );
 };
-
 export default Counter;

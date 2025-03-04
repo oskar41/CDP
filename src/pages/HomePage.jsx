@@ -5,11 +5,9 @@ import Counter from "../components/counter";
 
 const HomePage = () => {
   const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
-
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>RTK query {count}</h1>
       <Counter />
     </div>
   );
