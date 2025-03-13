@@ -31,7 +31,7 @@ const Sidebar = () => {
                     <ListItemIcon>
                         <MailIcon />
                     </ListItemIcon>
-                    <ListItemText primary="About" />
+                    <ListItemText primary="XSS" />
                 </ListItemButton>
                 </ListItem>
             </Link>
