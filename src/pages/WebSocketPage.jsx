@@ -10,7 +10,7 @@ const WebSocketPage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [connectionState, setConnectionState] = useState('CLOSED');
 
-  // Функція для конвертації Blob в base64
+  // Function to convert Blob to base64
   const blobToBase64 = (blob) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -23,7 +23,7 @@ const WebSocketPage = () => {
     });
   };
 
-  // Функція для конвертації стану з'єднання в текст
+  // Function to convert connection state to text
   const getConnectionStateText = (state) => {
     switch (state) {
       case WebSocket.CONNECTING:
@@ -39,7 +39,7 @@ const WebSocketPage = () => {
     }
   };
 
-  // Функція для отримання кольору стану
+  // Function to get state color
   const getConnectionStateColor = (state) => {
     switch (state) {
       case 'CONNECTING':
@@ -137,7 +137,7 @@ const WebSocketPage = () => {
     }]);
   };
 
-  // Відстеження стану з'єднання
+  // Tracking connection state
   useEffect(() => {
     console.log(ws?.readyState,isConnected,  'ws?.readyState');
     if (ws) {
