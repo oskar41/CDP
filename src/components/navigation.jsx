@@ -11,6 +11,8 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import WorkIcon from '@mui/icons-material/Work';
+import CodeIcon from '@mui/icons-material/Code';
+import FunctionsIcon from '@mui/icons-material/Functions';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -73,6 +75,38 @@ const Sidebar = () => {
                                     <WorkIcon />
                                 </ListItemIcon>
                                 <ListItemText primary="Web Workers" />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
+                    <Link to="/iife" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ListItem key="IIFE" disablePadding>
+                            <ListItemButton 
+                                sx={{
+                                    '&:hover': {
+                                        backgroundColor: '#1976d2',
+                                    },
+                                }}
+                            >
+                                <ListItemIcon sx={{ color: '#ffffff' }}>
+                                    <CodeIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="IIFE" />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
+                    <Link to="/pure-functions" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ListItem key="PureFunctions" disablePadding>
+                            <ListItemButton 
+                                sx={{
+                                    '&:hover': {
+                                        backgroundColor: '#1976d2',
+                                    },
+                                }}
+                            >
+                                <ListItemIcon sx={{ color: '#ffffff' }}>
+                                    <FunctionsIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Pure Functions" />
                             </ListItemButton>
                         </ListItem>
                     </Link>

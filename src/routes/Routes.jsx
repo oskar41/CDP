@@ -3,6 +3,8 @@ import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
 import WebWorkersPage from '../pages/WebWorkersPage';
 import NotFoundPage from '../pages/NotFoundPage';
+import IIFEPage from '../pages/IIFEPage';
+import PureFunctionsPage from '../pages/PureFunctionsPage';
 
 const AppRoutes = () => {
   return (
@@ -10,6 +12,8 @@ const AppRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/web-workers" element={<WebWorkersPage />} />
+      <Route path="/iife" element={<IIFEPage />} />
+      <Route path="/pure-functions" element={<PureFunctionsPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
