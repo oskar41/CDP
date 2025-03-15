@@ -15,6 +15,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import FunctionsIcon from '@mui/icons-material/Functions';
 import { Link } from 'react-router-dom';
 import { Sync as SyncIcon } from '@mui/icons-material';
+import { WifiTethering as WebSocketIcon } from '@mui/icons-material';
 
 const Sidebar = () => {
     return (
@@ -124,6 +125,22 @@ const Sidebar = () => {
                                     <SyncIcon sx={{ color: '#ffffff' }} />
                                 </ListItemIcon>
                                 <ListItemText primary="Long Polling" />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
+                    <Link to="/websocket" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ListItem disablePadding>
+                            <ListItemButton
+                                sx={{
+                                    '&:hover': {
+                                        backgroundColor: '#1976d2',
+                                    },
+                                }}
+                            >
+                                <ListItemIcon>
+                                    <WebSocketIcon sx={{ color: '#ffffff' }} />
+                                </ListItemIcon>
+                                <ListItemText primary="WebSocket" />
                             </ListItemButton>
                         </ListItem>
                     </Link>

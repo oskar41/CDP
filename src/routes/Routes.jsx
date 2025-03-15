@@ -6,6 +6,7 @@ import NotFoundPage from '../pages/NotFoundPage';
 import IIFEPage from '../pages/IIFEPage';
 import PureFunctionsPage from '../pages/PureFunctionsPage';
 import LongPollingPage from '../pages/LongPollingPage';
+import WebSocketPage from '../pages/WebSocketPage';
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       <Route path="/iife" element={<IIFEPage />} />
       <Route path="/pure-functions" element={<PureFunctionsPage />} />
       <Route path="/long-polling" element={<LongPollingPage />} />
+      <Route path="/websocket" element={<WebSocketPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
