@@ -6,10 +6,6 @@ import { useGetCounterValueQuery } from "../features/counter/counterApi";
 const Counter = () => {
   const { data: counterValue, isLoading, isFetching, isError, refetch } =
     useGetCounterValueQuery();
-  
-    useEffect(() => {
-      console.log('isLoading', isLoading)
-    }, [isLoading])
 
   if (isFetching) return <p>Loading...</p>;
   if (isError) return <p>Error loading counter</p>;

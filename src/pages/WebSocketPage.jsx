@@ -65,7 +65,6 @@ const WebSocketPage = () => {
     };
 
     socket.onmessage = async (event) => {
-      console.log(event.data, 'event.data');
       if (typeof event.data === 'string' && event.data.startsWith('data:image/')) {
         addMessage('Server', `Received image`, event.data);
       } else {
@@ -139,7 +138,6 @@ const WebSocketPage = () => {
 
   // Tracking connection state
   useEffect(() => {
-    console.log(ws?.readyState,isConnected,  'ws?.readyState');
     if (ws) {
       setConnectionState(getConnectionStateText(ws.readyState));
     } else if (isConnected) {
