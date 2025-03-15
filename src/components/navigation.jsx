@@ -14,6 +14,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import FunctionsIcon from '@mui/icons-material/Functions';
 import { Link } from 'react-router-dom';
+import { Sync as SyncIcon } from '@mui/icons-material';
 
 const Sidebar = () => {
     return (
@@ -107,6 +108,22 @@ const Sidebar = () => {
                                     <FunctionsIcon />
                                 </ListItemIcon>
                                 <ListItemText primary="Pure Functions" />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
+                    <Link to="/long-polling" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ListItem disablePadding>
+                            <ListItemButton
+                                sx={{
+                                    '&:hover': {
+                                        backgroundColor: '#1976d2',
+                                    },
+                                }}
+                            >
+                                <ListItemIcon>
+                                    <SyncIcon sx={{ color: '#ffffff' }} />
+                                </ListItemIcon>
+                                <ListItemText primary="Long Polling" />
                             </ListItemButton>
                         </ListItem>
                     </Link>

@@ -5,6 +5,7 @@ import WebWorkersPage from '../pages/WebWorkersPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import IIFEPage from '../pages/IIFEPage';
 import PureFunctionsPage from '../pages/PureFunctionsPage';
+import LongPollingPage from '../pages/LongPollingPage';
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/web-workers" element={<WebWorkersPage />} />
       <Route path="/iife" element={<IIFEPage />} />
       <Route path="/pure-functions" element={<PureFunctionsPage />} />
+      <Route path="/long-polling" element={<LongPollingPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
